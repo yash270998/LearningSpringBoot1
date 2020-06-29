@@ -7,6 +7,21 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<form action="saveVendor" method="POST">
+<pre>
+ID : <input type="text" name="id">
+Code : <input type="text" name="code">
+Name : <input type="text" name="name">
+Type : <select><option>Regular</option>
+				<option>Contract</option>
+		</select>
+Email: <input type="text" name="email">
+Phone: <input type="text" name="phone">
+Address: <input type="text" name="address">
+<input type="submit" value="Save">
+</pre>
+</form>
+${msg}
+<a href="displayVendor">View All</a>
 </body>
 </html>
