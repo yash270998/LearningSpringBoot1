@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.location.entities.Location;
 import com.location.service.LocationService;
+import com.location.util.EmailUtil;
 
 import org.springframework.web.bind.annotation.ModelAttribute;
 
@@ -17,6 +18,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 public class LocationController {
 	@Autowired
 	LocationService service;
+	@Autowired
+	private EmailUtil emailUtil;
 	@RequestMapping("/showCreate")
 	public String showCreate() {
 		return "createLocation";
@@ -27,6 +30,12 @@ public class LocationController {
 		Location locationSaved = service.saveLocation(location);
 		String msg = "Location Saved with ID : "+location.getId();
 		modelMapd.addAttribute("msg",msg);
+		try {
+		emailUtil.sendMail("yashtestuser1@gmail.com", "Location Save", "Location saved Sucessfully!");
+		}
+		catch (Exception e) {
+			System.out.println(e);
+		}
 		return "createLocation";
 		
 	}
