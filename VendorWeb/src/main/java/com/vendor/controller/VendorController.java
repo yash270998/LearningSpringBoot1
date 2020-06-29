@@ -52,7 +52,7 @@ public class VendorController {
 		
 	}
 	
-	@RequestMapping("/updateLoc")
+	@RequestMapping("/updateVendor")
 	public String updateVendor(@ModelAttribute("vendor") Vendor vendor,ModelMap modelMapd) {
 			service.updateVendor(vendor);
 			List<Vendor> vendors = service.getAll();
