@@ -12,7 +12,7 @@
 ID : <input type="text" name="id">
 Code : <input type="text" name="code">
 Name : <input type="text" name="name">
-Type : <select><option>Regular</option>
+Type : <select name="type"><option>Regular</option>
 				<option>Contract</option>
 		</select>
 Email: <input type="text" name="email">

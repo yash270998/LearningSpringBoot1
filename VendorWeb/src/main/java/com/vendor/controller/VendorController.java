@@ -41,7 +41,7 @@ public class VendorController {
 		Vendor vendor = service.getVendorById(id);
 		service.deleteVendor(vendor);
 		List<Vendor> vendors = service.getAll();
-		modelMapd.addAttribute("locations",vendors);
+		modelMapd.addAttribute("vendors",vendors);
 		return "displayVendor";
 	}
 	@RequestMapping("/showUpdate")
