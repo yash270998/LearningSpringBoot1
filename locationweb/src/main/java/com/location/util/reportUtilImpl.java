@@ -9,7 +9,8 @@ import org.jfree.chart.ChartUtilities;
 import org.jfree.chart.JFreeChart;
 import org.jfree.data.general.DefaultPieDataset;
 import org.jfree.data.general.PieDataset;
-
+import org.springframework.stereotype.Component;
+@Component
 public class reportUtilImpl implements reportUtil {
 
 	@Override
@@ -20,7 +21,7 @@ public class reportUtilImpl implements reportUtil {
 		}
 		JFreeChart chart = ChartFactory.createPieChart3D("Location Type Report",dataset, false, false, false);
 		try {
-			ChartUtilities.saveChartAsJPEG(new File(path), chart, 400, 400);
+			ChartUtilities.saveChartAsJPEG(new File(path+"/pieChart.jpeg"), chart, 400, 400);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
