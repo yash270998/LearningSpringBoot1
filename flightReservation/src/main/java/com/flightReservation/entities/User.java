@@ -1,17 +1,18 @@
 package com.flightReservation.entities;
 
-public class User {
-	private int id;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class User extends AbstractEntity{
+	
 	private String firstName;
 	private String lastName;
 	private String email;
 	private String password;
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
+	
 	public String getFirstName() {
 		return firstName;
 	}

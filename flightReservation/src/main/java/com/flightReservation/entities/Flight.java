@@ -3,20 +3,17 @@ package com.flightReservation.entities;
 import java.sql.Timestamp;
 import java.util.Date;
 
-public class Flight {
-	private int id;
+import javax.persistence.Entity;
+@Entity
+public class Flight extends AbstractEntity {
+	
 	private String flightNumber;
 	private String operatingAirlines;
 	private String departureCity;
 	private String arrivalCity;
 	private Date dateOfDeparture;
 	private Timestamp estimatedDepartureTime;
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
+	
 	public String getFlightNumber() {
 		return flightNumber;
 	}
