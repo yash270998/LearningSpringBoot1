@@ -7,13 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="login" method="post">
-<pre>
-UserName : <input type="text" name="email">
-Password : <input type="password" name="password">
-<input type="submit" value="login">
-${msg}
-</pre>
-</form>
+Welcome
 </body>
 </html>

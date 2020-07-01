@@ -6,4 +6,6 @@ import com.flightReservation.entities.User;
 
 public interface userRepository extends JpaRepository<User, Integer> {
 
+	User findByEmail(String email);
+
 }
