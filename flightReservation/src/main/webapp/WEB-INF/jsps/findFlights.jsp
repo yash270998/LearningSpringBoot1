@@ -8,5 +8,13 @@
 </head>
 <body>
 Welcome
+<form action="findFlights" method="POST">
+<pre>
+From: <input type="text" name="from">
+To: <input type="text" name="to">
+Departure Date: <input type="text" name="departureDate">
+<input type="submit" name="search">
+</pre>
+</form>
 </body>
 </html>
