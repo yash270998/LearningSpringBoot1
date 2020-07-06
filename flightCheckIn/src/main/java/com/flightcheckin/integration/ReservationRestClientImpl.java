@@ -1,10 +1,11 @@
 package com.flightcheckin.integration;
 
+import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
 import com.flightcheckin.integration.dto.Reservation;
 import com.flightcheckin.integration.dto.ReservationUpdateRequest;
-
+@Component
 public class ReservationRestClientImpl implements ReservationRestClient {
 
 	@Override
