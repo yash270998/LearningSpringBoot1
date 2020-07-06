@@ -43,7 +43,7 @@ public class reservationServiceImpl implements reservationService{
 		reservation.setCheckedIn(false);
 		
 		Reservation savedReservation = reservationrepo.save(reservation);
-		String pathString = "/reservations/"+savedReservation.getId()+".pdf";
+		String pathString = "/"+savedReservation.getId()+".pdf";
 		pdfgenerator.generateItinerary(savedReservation, pathString);
 		emailutil.sendItinerary(passenger.getEmail(), pathString);
 		return savedReservation;
