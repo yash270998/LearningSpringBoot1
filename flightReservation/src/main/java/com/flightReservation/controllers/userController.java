@@ -1,5 +1,7 @@
 package com.flightReservation.controllers;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -17,6 +19,7 @@ public class userController {
 	@Autowired
 	private userRepository userrepo;
 	
+	private static final Logger LOGGER = LoggerFactory.getLogger(userController.class);
 	
 	@RequestMapping("/showReg")
 	public String  showRegistrationPage() {
@@ -36,6 +39,12 @@ public class userController {
 	}
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
 	public String login(@RequestParam("email") String email, @RequestParam("password") String password, ModelMap modelmap) {
+		LOGGER.error("ERROR");
+		LOGGER.warn("ERROR");
+		LOGGER.info("ERROR");
+		LOGGER.debug("ERROR");
+		LOGGER.trace("ERROR");
+		
 		User user = userrepo.findByEmail(email);
 		if (user.getPassword().equals(password)) {
 			return "findFlights";
