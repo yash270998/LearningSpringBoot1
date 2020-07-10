@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.flightReservation.entities.Flight;
 import com.flightReservation.repos.flightRepository;
+import com.itextpdf.text.pdf.PdfStructTreeController.returnType;
 
 @Controller
 public class flightController {
@@ -30,5 +31,10 @@ public class flightController {
 		modelmap.addAttribute("flights",flights);
 		LOGGER.info("Flights Found are : "+flights);
 		return "displayFlights";
+	}
+	@RequestMapping("admin/showAddFlight")
+	public String showAddFlight() {
+		
+		return "addFlight";
 	}
 }

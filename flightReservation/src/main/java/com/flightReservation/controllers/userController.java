@@ -3,6 +3,8 @@ package com.flightReservation.controllers;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCrypt;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -20,7 +22,8 @@ public class userController {
 	private userRepository userrepo;
 	
 	private static final Logger LOGGER = LoggerFactory.getLogger(userController.class);
-	
+	@Autowired
+	private BCryptPasswordEncoder encoder;
 	@RequestMapping("/showReg")
 	public String  showRegistrationPage() {
 		LOGGER.info("Inside ShowRegistration Page");
@@ -29,6 +32,7 @@ public class userController {
 	@RequestMapping(value = "/registerUser", method = RequestMethod.POST)
 	public String register(@ModelAttribute("user") User user) {
 		LOGGER.info("Inside Register()" + user);
+		user.setPassword(encoder.encode(user.getPassword()));
 		userrepo.save(user);
 		return "login/login";
 		

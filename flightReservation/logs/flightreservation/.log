@@ -30,3 +30,9 @@
 2020-07-09 19:24:36 - Completed initialization in 7 ms
 2020-07-09 19:24:36 - Inside ShowLoginPage()
 2020-07-09 19:24:46 - Inside Login()yash@gmail.com
+2020-07-09 22:06:06 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h28m46s117ms838µs100ns).
+2020-07-09 22:06:23 - Application shutdown requested.
+2020-07-09 22:06:23 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-07-09 22:06:23 - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-09 22:06:23 - HikariPool-1 - Shutdown initiated...
+2020-07-09 22:06:24 - HikariPool-1 - Shutdown completed.
