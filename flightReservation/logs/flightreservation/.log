@@ -1,38 +1,276 @@
-2020-07-09 19:24:18 - Starting FlightReservationApplication on StandinImmortal with PID 17224 (S:\Git Repos\LearningSpringBoot1\flightReservation\target\classes started by YashSomani in S:\Git Repos\LearningSpringBoot1\flightReservation)
-2020-07-09 19:24:18 - No active profile set, falling back to default profiles: default
-2020-07-09 19:24:19 - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2020-07-09 19:24:19 - Finished Spring Data repository scanning in 58ms. Found 4 JPA repository interfaces.
-2020-07-09 19:24:19 - Tomcat initialized with port(s): 8080 (http)
-2020-07-09 19:24:19 - Initializing ProtocolHandler ["http-nio-8080"]
-2020-07-09 19:24:19 - Starting service [Tomcat]
-2020-07-09 19:24:19 - Starting Servlet engine: [Apache Tomcat/9.0.36]
-2020-07-09 19:24:20 - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-2020-07-09 19:24:20 - Initializing Spring embedded WebApplicationContext
-2020-07-09 19:24:20 - Root WebApplicationContext: initialization completed in 1352 ms
-2020-07-09 19:24:20 - Initializing ExecutorService 'applicationTaskExecutor'
-2020-07-09 19:24:20 - HikariPool-1 - Starting...
-2020-07-09 19:24:20 - HikariPool-1 - Start completed.
-2020-07-09 19:24:20 - HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-07-09 19:24:20 - HHH000412: Hibernate ORM core version 5.4.17.Final
-2020-07-09 19:24:20 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-07-09 19:24:20 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2020-07-09 19:24:20 - Adding welcome page: ServletContext resource [/index.html]
-2020-07-09 19:24:20 - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2020-07-09 19:24:20 - Starting ProtocolHandler ["http-nio-8080"]
-2020-07-09 19:24:20 - Tomcat started on port(s): 8080 (http) with context path '/flightreservation'
-2020-07-09 19:24:20 - Triggering deferred initialization of Spring Data repositories…
-2020-07-09 19:24:21 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-07-09 19:24:21 - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-07-09 19:24:21 - Spring Data repositories initialized!
-2020-07-09 19:24:21 - Started FlightReservationApplication in 3.348 seconds (JVM running for 4.36)
-2020-07-09 19:24:36 - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-07-09 19:24:36 - Initializing Servlet 'dispatcherServlet'
-2020-07-09 19:24:36 - Completed initialization in 7 ms
-2020-07-09 19:24:36 - Inside ShowLoginPage()
-2020-07-09 19:24:46 - Inside Login()yash@gmail.com
-2020-07-09 22:06:06 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h28m46s117ms838µs100ns).
-2020-07-09 22:06:23 - Application shutdown requested.
-2020-07-09 22:06:23 - Closing JPA EntityManagerFactory for persistence unit 'default'
-2020-07-09 22:06:23 - Shutting down ExecutorService 'applicationTaskExecutor'
-2020-07-09 22:06:23 - HikariPool-1 - Shutdown initiated...
-2020-07-09 22:06:24 - HikariPool-1 - Shutdown completed.
+2020-07-10 17:07:09 - Starting FlightReservationApplication on StandinImmortal with PID 18232 (S:\Git Repos\LearningSpringBoot1\flightReservation\target\classes started by YashSomani in S:\Git Repos\LearningSpringBoot1\flightReservation)
+2020-07-10 17:07:09 - No active profile set, falling back to default profiles: default
+2020-07-10 17:07:10 - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-07-10 17:07:11 - Finished Spring Data repository scanning in 131ms. Found 5 JPA repository interfaces.
+2020-07-10 17:07:11 - Tomcat initialized with port(s): 8080 (http)
+2020-07-10 17:07:11 - Initializing ProtocolHandler ["http-nio-8080"]
+2020-07-10 17:07:11 - Starting service [Tomcat]
+2020-07-10 17:07:11 - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-07-10 17:07:12 - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-07-10 17:07:12 - Initializing Spring embedded WebApplicationContext
+2020-07-10 17:07:12 - Root WebApplicationContext: initialization completed in 3114 ms
+2020-07-10 17:07:13 - Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-10 17:07:13 - HikariPool-1 - Starting...
+2020-07-10 17:07:13 - HikariPool-1 - Start completed.
+2020-07-10 17:07:13 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-07-10 17:07:13 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController': Unsatisfied dependency expressed through field 'securityService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.flightReservation.services.SecurityService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-07-10 17:07:13 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-07-10 17:07:13 - HHH000412: Hibernate ORM core version 5.4.17.Final
+2020-07-10 17:07:14 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-07-10 17:07:14 - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-07-10 17:07:15 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-07-10 17:07:15 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-07-10 17:07:15 - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-10 17:07:15 - HikariPool-1 - Shutdown initiated...
+2020-07-10 17:07:15 - HikariPool-1 - Shutdown completed.
+2020-07-10 17:07:15 - Stopping service [Tomcat]
+2020-07-10 17:07:15 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-07-10 17:07:16 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field securityService in com.flightReservation.controllers.userController required a bean of type 'com.flightReservation.services.SecurityService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.flightReservation.services.SecurityService' in your configuration.
+
+2020-07-10 17:07:46 - Starting FlightReservationApplication on StandinImmortal with PID 8296 (S:\Git Repos\LearningSpringBoot1\flightReservation\target\classes started by YashSomani in S:\Git Repos\LearningSpringBoot1\flightReservation)
+2020-07-10 17:07:46 - No active profile set, falling back to default profiles: default
+2020-07-10 17:07:47 - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-07-10 17:07:47 - Finished Spring Data repository scanning in 64ms. Found 5 JPA repository interfaces.
+2020-07-10 17:07:47 - Tomcat initialized with port(s): 8080 (http)
+2020-07-10 17:07:47 - Initializing ProtocolHandler ["http-nio-8080"]
+2020-07-10 17:07:47 - Starting service [Tomcat]
+2020-07-10 17:07:47 - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-07-10 17:07:47 - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-07-10 17:07:47 - Initializing Spring embedded WebApplicationContext
+2020-07-10 17:07:47 - Root WebApplicationContext: initialization completed in 1485 ms
+2020-07-10 17:07:48 - Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-10 17:07:48 - HikariPool-1 - Starting...
+2020-07-10 17:07:48 - HikariPool-1 - Start completed.
+2020-07-10 17:07:48 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-07-10 17:07:48 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController': Unsatisfied dependency expressed through field 'securityService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.flightReservation.services.SecurityService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-07-10 17:07:48 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-07-10 17:07:48 - HHH000412: Hibernate ORM core version 5.4.17.Final
+2020-07-10 17:07:48 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-07-10 17:07:48 - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-07-10 17:07:49 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-07-10 17:07:49 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-07-10 17:07:49 - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-10 17:07:49 - HikariPool-1 - Shutdown initiated...
+2020-07-10 17:07:49 - HikariPool-1 - Shutdown completed.
+2020-07-10 17:07:49 - Stopping service [Tomcat]
+2020-07-10 17:07:49 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-07-10 17:07:49 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field securityService in com.flightReservation.controllers.userController required a bean of type 'com.flightReservation.services.SecurityService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.flightReservation.services.SecurityService' in your configuration.
+
+2020-07-10 17:07:57 - Starting FlightReservationApplication on StandinImmortal with PID 3272 (S:\Git Repos\LearningSpringBoot1\flightReservation\target\classes started by YashSomani in S:\Git Repos\LearningSpringBoot1\flightReservation)
+2020-07-10 17:07:57 - No active profile set, falling back to default profiles: default
+2020-07-10 17:07:58 - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-07-10 17:07:58 - Finished Spring Data repository scanning in 64ms. Found 5 JPA repository interfaces.
+2020-07-10 17:07:58 - Tomcat initialized with port(s): 8080 (http)
+2020-07-10 17:07:58 - Initializing ProtocolHandler ["http-nio-8080"]
+2020-07-10 17:07:58 - Starting service [Tomcat]
+2020-07-10 17:07:58 - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-07-10 17:07:59 - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-07-10 17:07:59 - Initializing Spring embedded WebApplicationContext
+2020-07-10 17:07:59 - Root WebApplicationContext: initialization completed in 1486 ms
+2020-07-10 17:07:59 - Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-10 17:07:59 - HikariPool-1 - Starting...
+2020-07-10 17:07:59 - HikariPool-1 - Start completed.
+2020-07-10 17:07:59 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-07-10 17:07:59 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController': Unsatisfied dependency expressed through field 'securityService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.flightReservation.services.SecurityService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-07-10 17:07:59 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-07-10 17:07:59 - HHH000412: Hibernate ORM core version 5.4.17.Final
+2020-07-10 17:07:59 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-07-10 17:07:59 - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-07-10 17:08:00 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-07-10 17:08:00 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-07-10 17:08:00 - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-10 17:08:00 - HikariPool-1 - Shutdown initiated...
+2020-07-10 17:08:00 - HikariPool-1 - Shutdown completed.
+2020-07-10 17:08:00 - Stopping service [Tomcat]
+2020-07-10 17:08:00 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-07-10 17:08:00 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field securityService in com.flightReservation.controllers.userController required a bean of type 'com.flightReservation.services.SecurityService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.flightReservation.services.SecurityService' in your configuration.
+
+2020-07-10 17:30:38 - Starting FlightReservationApplication on StandinImmortal with PID 19808 (S:\Git Repos\LearningSpringBoot1\flightReservation\target\classes started by YashSomani in S:\Git Repos\LearningSpringBoot1\flightReservation)
+2020-07-10 17:30:38 - No active profile set, falling back to default profiles: default
+2020-07-10 17:30:39 - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-07-10 17:30:39 - Finished Spring Data repository scanning in 67ms. Found 5 JPA repository interfaces.
+2020-07-10 17:30:40 - Tomcat initialized with port(s): 8080 (http)
+2020-07-10 17:30:40 - Initializing ProtocolHandler ["http-nio-8080"]
+2020-07-10 17:30:40 - Starting service [Tomcat]
+2020-07-10 17:30:40 - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-07-10 17:30:40 - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-07-10 17:30:40 - Initializing Spring embedded WebApplicationContext
+2020-07-10 17:30:40 - Root WebApplicationContext: initialization completed in 1464 ms
+2020-07-10 17:30:40 - Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-10 17:30:40 - HikariPool-1 - Starting...
+2020-07-10 17:30:40 - HikariPool-1 - Start completed.
+2020-07-10 17:30:40 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-07-10 17:30:40 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController': Unsatisfied dependency expressed through field 'securityService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.flightReservation.services.SecurityService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-07-10 17:30:40 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-07-10 17:30:40 - HHH000412: Hibernate ORM core version 5.4.17.Final
+2020-07-10 17:30:40 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-07-10 17:30:41 - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-07-10 17:30:41 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-07-10 17:30:41 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-07-10 17:30:41 - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-10 17:30:41 - HikariPool-1 - Shutdown initiated...
+2020-07-10 17:30:41 - HikariPool-1 - Shutdown completed.
+2020-07-10 17:30:41 - Stopping service [Tomcat]
+2020-07-10 17:30:41 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-07-10 17:30:41 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field securityService in com.flightReservation.controllers.userController required a bean of type 'com.flightReservation.services.SecurityService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.flightReservation.services.SecurityService' in your configuration.
+
+2020-07-10 17:31:15 - Starting FlightReservationApplication on StandinImmortal with PID 9352 (S:\Git Repos\LearningSpringBoot1\flightReservation\target\classes started by YashSomani in S:\Git Repos\LearningSpringBoot1\flightReservation)
+2020-07-10 17:31:15 - No active profile set, falling back to default profiles: default
+2020-07-10 17:31:16 - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-07-10 17:31:16 - Finished Spring Data repository scanning in 63ms. Found 5 JPA repository interfaces.
+2020-07-10 17:31:17 - Tomcat initialized with port(s): 8080 (http)
+2020-07-10 17:31:17 - Initializing ProtocolHandler ["http-nio-8080"]
+2020-07-10 17:31:17 - Starting service [Tomcat]
+2020-07-10 17:31:17 - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-07-10 17:31:17 - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-07-10 17:31:17 - Initializing Spring embedded WebApplicationContext
+2020-07-10 17:31:17 - Root WebApplicationContext: initialization completed in 1458 ms
+2020-07-10 17:31:17 - Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-10 17:31:17 - HikariPool-1 - Starting...
+2020-07-10 17:31:17 - HikariPool-1 - Start completed.
+2020-07-10 17:31:17 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-07-10 17:31:17 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController': Unsatisfied dependency expressed through field 'securityService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.flightReservation.services.SecurityService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-07-10 17:31:17 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-07-10 17:31:17 - HHH000412: Hibernate ORM core version 5.4.17.Final
+2020-07-10 17:31:17 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-07-10 17:31:17 - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-07-10 17:31:18 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-07-10 17:31:18 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-07-10 17:31:18 - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-10 17:31:18 - HikariPool-1 - Shutdown initiated...
+2020-07-10 17:31:18 - HikariPool-1 - Shutdown completed.
+2020-07-10 17:31:18 - Stopping service [Tomcat]
+2020-07-10 17:31:18 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-07-10 17:31:18 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field securityService in com.flightReservation.controllers.userController required a bean of type 'com.flightReservation.services.SecurityService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.flightReservation.services.SecurityService' in your configuration.
+
+2020-07-10 17:32:05 - Starting FlightReservationApplication on StandinImmortal with PID 1640 (S:\Git Repos\LearningSpringBoot1\flightReservation\target\classes started by YashSomani in S:\Git Repos\LearningSpringBoot1\flightReservation)
+2020-07-10 17:32:05 - No active profile set, falling back to default profiles: default
+2020-07-10 17:32:06 - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-07-10 17:32:06 - Finished Spring Data repository scanning in 66ms. Found 5 JPA repository interfaces.
+2020-07-10 17:32:06 - Tomcat initialized with port(s): 8080 (http)
+2020-07-10 17:32:06 - Initializing ProtocolHandler ["http-nio-8080"]
+2020-07-10 17:32:06 - Starting service [Tomcat]
+2020-07-10 17:32:06 - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-07-10 17:32:07 - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-07-10 17:32:07 - Initializing Spring embedded WebApplicationContext
+2020-07-10 17:32:07 - Root WebApplicationContext: initialization completed in 1579 ms
+2020-07-10 17:32:07 - Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-10 17:32:07 - HikariPool-1 - Starting...
+2020-07-10 17:32:07 - HikariPool-1 - Start completed.
+2020-07-10 17:32:07 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-07-10 17:32:07 - HHH000412: Hibernate ORM core version 5.4.17.Final
+2020-07-10 17:32:07 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-07-10 17:32:07 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-07-10 17:32:07 - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6b2e46af, org.springframework.security.web.context.SecurityContextPersistenceFilter@7efd28bd, org.springframework.security.web.header.HeaderWriterFilter@1f0b3cfe, org.springframework.security.web.authentication.logout.LogoutFilter@4b6d92e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7718a40f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@21079a12, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@60325987, org.springframework.security.web.session.SessionManagementFilter@612e21b9, org.springframework.security.web.access.ExceptionTranslationFilter@42ea287, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5d21202d]
+2020-07-10 17:32:07 - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-07-10 17:32:08 - Adding welcome page: ServletContext resource [/index.html]
+2020-07-10 17:32:08 - Starting ProtocolHandler ["http-nio-8080"]
+2020-07-10 17:32:08 - Tomcat started on port(s): 8080 (http) with context path '/flightreservation'
+2020-07-10 17:32:08 - Triggering deferred initialization of Spring Data repositories…
+2020-07-10 17:32:08 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-07-10 17:32:08 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-07-10 17:32:09 - Spring Data repositories initialized!
+2020-07-10 17:32:09 - Started FlightReservationApplication in 3.789 seconds (JVM running for 4.725)
+2020-07-10 17:32:23 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-10 17:32:23 - Initializing Servlet 'dispatcherServlet'
+2020-07-10 17:32:23 - Completed initialization in 6 ms
+2020-07-10 17:32:39 - Inside ShowRegistration Page
+2020-07-10 17:33:08 - Inside Register()User [firstName=Yash, lastName=Somani, email=yashtestuser1, password=yash]
+2020-07-10 17:33:30 - Inside Login()yashtestuser1
+2020-07-10 17:35:04 - Inside ShowLoginPage()
+2020-07-10 17:35:10 - Inside Login()yashtestuser1
+2020-07-10 17:36:43 - Application shutdown requested.
+2020-07-10 17:36:43 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-07-10 17:36:43 - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-10 17:36:43 - HikariPool-1 - Shutdown initiated...
+2020-07-10 17:36:43 - HikariPool-1 - Shutdown completed.
