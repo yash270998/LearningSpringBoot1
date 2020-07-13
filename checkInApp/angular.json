@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "checkInApp"
+    }
+  },
+  "defaultProject": "checkInApp",
+  "cli": {
+    "analytics": false
+  }
 }
