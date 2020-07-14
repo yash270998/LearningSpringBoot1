@@ -22,7 +22,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 	@Override
 	public void configure(HttpSecurity http) {
 		try {
-			http.authorizeRequests().antMatchers("/reservation/*","/reservations","/showReg","/","/index.html","/registerUser","/login","/showLogin","/login/*").permitAll()
+			http.authorizeRequests().antMatchers("/reservation/*","/reservations/","/showReg","/","/index.html","/registerUser","/login","/showLogin","/login/*").permitAll()
 			.antMatchers("/admin/showAddFlight").hasAuthority("ADMIN").anyRequest().authenticated().and().csrf().disable();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

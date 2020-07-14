@@ -21,7 +21,7 @@ export class DataService {
   }
 
   public checkin(checkInRequest):any{
-    return this._http.post(this.url,checkInRequest).pipe(map(res=>{
+    return this._http.post("http://localhost:8080/flightreservation/reservations/",checkInRequest).pipe(map(res=>{
       return res;
     },
     error=>{
