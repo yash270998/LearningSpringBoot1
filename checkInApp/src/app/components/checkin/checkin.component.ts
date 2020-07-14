@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ActivatedRoute } from '@angular/router'; 
+import { DataService } from 'src/app/services/data.service';
 @Component({
   selector: 'app-checkin',
   templateUrl: './checkin.component.html',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CheckinComponent implements OnInit {
 
-  constructor() { }
+  data:any;
+  constructor(private route:ActivatedRoute, private service:DataService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    var id = Number.parseInt(this.route.snapshot.paramMap.get("id"));
+    this.service.getReservation(id).subscribe(res=>{
+      this.data = res;
+    })
   }
 
 }
