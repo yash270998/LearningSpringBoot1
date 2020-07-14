@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-startcheckin',
   templateUrl: './startcheckin.component.html',
@@ -7,9 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StartcheckinComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private router:Router) { }
+  reservationId:number
   ngOnInit(): void {
   }
-
+  onSelect(id){
+    this.router.navigate(['/checkin',id]) 
+  }
 }
