@@ -5,7 +5,10 @@ import { AppComponent } from './app.component';
 import { StartcheckinComponent } from './components/startcheckin/startcheckin.component';
 import { CheckinComponent } from './components/checkin/checkin.component';
 import { ConfirmcheckinComponent } from './components/confirmcheckin/confirmcheckin.component';
-
+import { AppRouterModule } from './routing.module';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { DataService } from './services/data.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,9 +17,12 @@ import { ConfirmcheckinComponent } from './components/confirmcheckin/confirmchec
     ConfirmcheckinComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRouterModule,
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

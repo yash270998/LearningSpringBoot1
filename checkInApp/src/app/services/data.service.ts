@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {Http, Response} from '@angular/http';
+import {HttpClient, HttpResponse} from '@angular/common/http';
 import {map} from 'rxjs/operators';
 import {Observable} from 'rxjs';
 @Injectable({
@@ -7,12 +7,12 @@ import {Observable} from 'rxjs';
 })
 export class DataService {
   url:string = "http://localhost:8080/flightreservation/reservation/";
-  constructor(private _http:Http) { }
+  constructor(private _http:HttpClient) { }
 
   public getReservation(id:number):any{
     return this._http.get(this.url+id)
     .pipe(map(response=>{
-      return response.json();
+      return response;
     },
     error=>{
       console.error(error);
@@ -22,7 +22,7 @@ export class DataService {
 
   public checkin(checkInRequest):any{
     return this._http.post(this.url,checkInRequest).pipe(map(res=>{
-      return res.json();
+      return res;
     },
     error=>{
       console.error(error);

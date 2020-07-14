@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {Routes,RouterModule} from '@angular/router';
-import { StartCheckinComponent } from './components/startcheckin/startcheckin.component';
+import { StartcheckinComponent } from './components/startcheckin/startcheckin.component';
 import { CheckinComponent } from './components/checkin/checkin.component';
 import { ConfirmcheckinComponent } from './components/confirmcheckin/confirmcheckin.component';
 const routes:Routes=[
@@ -11,7 +11,7 @@ const routes:Routes=[
     },
     {
         path: 'startCheckIn',
-        component:StartCheckinComponent
+        component:StartcheckinComponent
     },
     {
         path: 'checkin/:id',
