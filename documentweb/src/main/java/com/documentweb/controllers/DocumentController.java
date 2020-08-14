@@ -17,7 +17,7 @@ public class DocumentController {
 	@Autowired
 	DocumentRepository repo;
 	
-	@RequestMapping("displayUpload")
+	@RequestMapping("/displayUpload")
 	public String displayUpload() {
 		return "documentupload";
 	}
