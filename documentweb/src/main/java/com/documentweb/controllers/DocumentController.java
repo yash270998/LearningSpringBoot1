@@ -1,9 +1,11 @@
 package com.documentweb.controllers;
 
 import java.io.IOException;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -18,11 +20,13 @@ public class DocumentController {
 	DocumentRepository repo;
 	
 	@RequestMapping("/displayUpload")
-	public String displayUpload() {
+	public String displayUpload(ModelMap modelMap) {
+		List<Document> documents = repo.findAll();
+		modelMap.addAttribute("documents",documents);
 		return "documentupload";
 	}
 	@RequestMapping(value="/upload",method = RequestMethod.POST)
-	public String uploadDocument(@RequestParam("document") MultipartFile multipartFile,@RequestParam("id") long id) {
+	public String uploadDocument(@RequestParam("document") MultipartFile multipartFile,@RequestParam("id") long id,ModelMap modelMap) {
 		Document document = new Document();
 		document.setId(id);
 		document.setName(multipartFile.getName());
@@ -33,6 +37,8 @@ public class DocumentController {
 			e.printStackTrace();
 		}
 		repo.save(document);
+		List<Document> documents = repo.findAll();
+		modelMap.addAttribute("documents",documents);
 		return "documentupload";
 	}
 }
